@@ -1,0 +1,17 @@
+html,
+body {
+  background: red;
+  height: 29cm;
+}
+
+page {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+@media print {
+  @page {
+    size: 210mm 297mm;
+    margin: 0;
+  }
+}
