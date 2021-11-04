@@ -1,12 +1,27 @@
 const getDefaultState = () => {
   return {
-    telephone: "021 049 8470",
-    cellphone: "079 049 8470",
-    email: "drobertpaul@gmail.com",
-    linkedin: "linkedin here",
-    github: "github here",
-    instagram: "instagram here",
-    website: "www.darrenpaul.net",
+    cellphone: { value: "+27 790 498 470", type: "mobile" },
+    email: { value: "drobertpaul@gmail.com", type: "email" },
+    linkedin: {
+      value: "darren-paul-16765ab2",
+      type: "link",
+      url: "https://www.linkedin.com/in/darren-paul-16765ab2/",
+    },
+    github: {
+      value: "github.com/darrenpaul",
+      type: "link",
+      url: "https://github.com/darrenpaul",
+    },
+    instagram: {
+      value: "instagram.com/darrenrpaul",
+      type: "link",
+      url: "https://www.instagram.com/darrenrpaul/",
+    },
+    website: {
+      value: "darrenpaul.net",
+      type: "link",
+      url: "https://www.darrenpaul.net/projects",
+    },
   };
 };
 

@@ -2,28 +2,70 @@ const getDefaultState = () => {
   return {
     workSkills: [
       {
-        text: "Python",
+        text: { value: "Python" },
       },
       {
-        text: "Javascript",
+        text: { value: "JavaScript" },
+      },
+      {
+        text: { value: "Node.js" },
+      },
+      {
+        text: { value: "VueJS / Nuxt" },
+      },
+      {
+        text: { value: "ReactJS / Next" },
+      },
+      {
+        text: { value: "Django" },
+      },
+      {
+        text: { value: "ExpressJS" },
+      },
+      {
+        text: { value: "Jest" },
+      },
+      {
+        text: { value: "HTML" },
+      },
+      {
+        text: { value: "RESTful API / JSON" },
+      },
+      {
+        text: { value: "CSS / SASS / Tailwind/ Bootstrap" },
+      },
+      {
+        text: { value: "Strapi" },
+      },
+      {
+        text: { value: "SQL / MongoDB / Firebase" },
+      },
+      {
+        text: { value: "AWS" },
+      },
+      {
+        text: { value: "Git" },
       },
     ],
 
     hobbySkills: [
       {
-        text: "cooking",
+        text: { value: "Photography" },
       },
       {
-        text: "cleaning",
+        text: { value: "Hiking" },
+      },
+      {
+        text: { value: "Cooking" },
       },
     ],
 
     languageSkills: [
       {
-        text: "English",
+        text: { value: "English" },
       },
       {
-        text: "Afrikaans",
+        text: { value: "Afrikaans" },
       },
     ],
   };

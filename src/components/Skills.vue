@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col">
-    <div class="bg-gray-400">
+  <div class="flex flex-col py-4">
+    <div>
       <Title
         :text="titleText"
         :textColor="twTextColor(title.textColor)"
@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       title: {
-        textColor: "red-500",
+        textColor: "gray-900",
         textSize: "medium",
       },
     };

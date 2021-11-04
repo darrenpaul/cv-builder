@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <label for="">{{ label.text }}</label>
-
-    <p>{{ text.text }}</p>
+  <div class="flex items-center gap-4">
+    <font-awesome-icon :icon="icon" />
+    <a class="text-sm" v-if="text.text.type === 'link'" :href="text.text.url">{{
+      text.text.value
+    }}</a>
+    <p class="text-sm" v-else>{{ text.text.value }}</p>
   </div>
 </template>
 
@@ -11,6 +13,9 @@ export default {
   props: {
     label: {
       type: Object,
+    },
+    icon: {
+      type: String,
     },
     text: {
       type: Object,

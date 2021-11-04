@@ -1,15 +1,11 @@
 <template>
-  <div class="">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quos
-      impedit aliquid ab recusandae quam veniam dicta. Odit quam numquam facere
-      reiciendis labore, inventore hic? Incidunt officia alias odit ipsam. Lorem
-      ipsum dolor sit amet consectetur adipisicing elit. Recusandae in nobis,
-      quo dolorum repellendus quod, obcaecati neque eligendi nesciunt tenetur
-      blanditiis quia non nostrum, velit ipsam amet qui ipsa sequi? Lorem ipsum
-      dolor sit amet consectetur, adipisicing elit. Odio earum cumque, a ipsum
-      maxime error necessitatibus, totam sit enim quas et ducimus voluptatibus
-      amet nemo iure magni tenetur aliquid minus?
+  <div>
+    <p class="text-sm">
+      I started my career in the VFX industry where I worked as a Pipeline TD
+      for 5 years. I had the opportunity to work on a Marvel Film, Love, Death
+      and Robots and a few other cool projects. Currently I am working at The
+      Gemini Solution as a software engineer, where my team and I are working
+      with Carrick Wealth to develop their tech.
     </p>
   </div>
 </template>

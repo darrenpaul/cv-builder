@@ -1,15 +1,24 @@
 <template>
-  <header :class="[headerStyle]">
-    <Title
-      :text="mainTitle.text"
-      :textColor="twTextColor(textColor)"
-      :textSize="mainTitle.textSize"
+  <header class="flex flex-col items-center gap-4">
+    <img
+      class="w-32 h-32 rounded-full"
+      src="@/assets/images/profile_picture.jpg"
+      alt=""
     />
-    <Title
-      :text="subTitle.text"
-      :textColor="twTextColor(textColor)"
-      :textSize="subTitle.textSize"
-    />
+
+    <div class="block pb-2 border-b-4 border-gray-900 border-solid">
+      <Title
+        :text="mainTitle.text"
+        :textColor="twTextColor(textColor)"
+        :textSize="mainTitle.textSize"
+      />
+      <Title
+        :text="subTitle.text"
+        :textColor="twTextColor(subTitle.textColor)"
+        :textSize="subTitle.textSize"
+        :bold="false"
+      />
+    </div>
   </header>
 </template>
 
@@ -34,10 +43,6 @@ export default {
       position: "Software Engineer", // DELETE WHEN STORE READY
 
       textColor: "gray-900",
-
-      header: {
-        bgColor: "green-500",
-      },
     };
   },
 
@@ -53,16 +58,9 @@ export default {
     subTitle() {
       return {
         text: this.position,
-        textColor: this.textColor,
+        textColor: "gray-500",
         textSize: "medium",
       };
-    },
-
-    headerStyle() {
-      // const bgColor = this.twBackgroundColor(this.header.bgColor);
-      // const padding = "p-12";
-      // return `${bgColor} ${padding}`;
-      return "";
     },
   },
 };

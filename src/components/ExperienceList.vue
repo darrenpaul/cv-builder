@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col gap-4">
     <Title :text="title" :textSize="'medium'" />
 
     <slot></slot>

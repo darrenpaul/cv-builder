@@ -1,10 +1,11 @@
 <template>
-  <div class="flex w-full h-full">
-    <SideDetails />
+  <div class="flex w-full h-full p-6 divide-x-4 divide-gray-900 divide-solid">
+    <SideDetails class="pr-4" />
 
-    <div>
+    <div class="flex flex-col gap-4 pl-4">
       <About />
-      <ExperienceList :title="'Work Experience'">
+
+      <ExperienceList :title="'WORK EXPERIENCE'">
         <WorkExperience
           v-for="(item, index) in workExperience"
           :key="index"
@@ -12,13 +13,13 @@
         />
       </ExperienceList>
 
-      <ExperienceList :title="'Education Experience'">
+      <!-- <ExperienceList :title="'Education Experience'">
         <EducationExperience
           v-for="(item, index) in educationExperience"
           :key="index"
           :experience="item"
         />
-      </ExperienceList>
+      </ExperienceList> -->
     </div>
   </div>
 </template>
@@ -28,7 +29,7 @@ import SideDetails from "@/components/SideDetails.vue";
 import About from "@/components/About.vue";
 import ExperienceList from "@/components/ExperienceList.vue";
 import WorkExperience from "@/components/WorkExperience.vue";
-import EducationExperience from "@/components/EducationExperience.vue";
+// import EducationExperience from "@/components/EducationExperience.vue";
 
 export default {
   components: {
@@ -36,7 +37,7 @@ export default {
     About,
     ExperienceList,
     WorkExperience,
-    EducationExperience,
+    // EducationExperience,
   },
 
   computed: {

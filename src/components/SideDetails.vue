@@ -1,21 +1,26 @@
 <template>
-  <div class="flex flex-col">
-    <PersonalInformation />
-    <Skills :titleText="'Work Skills'" :skills="workSkills" />
+  <div class="flex flex-col gap-4 min-w-max">
+    <Header />
+    <div class="divide-y-4 divide-gray-900 divide-solid">
+      <PersonalInformation />
 
-    <Skills :titleText="'Hobby Skills'" :skills="hobbySkills" />
+      <Skills :titleText="'EXPERTISE'" :skills="workSkills" />
 
-    <Skills :titleText="'language Skills'" :skills="languageSkills" />
+      <Skills :titleText="'HOBBIES'" :skills="hobbySkills" />
+
+      <Skills :titleText="'LANGUAGES'" :skills="languageSkills" />
+    </div>
   </div>
 </template>
 
 <script>
 // components
+import Header from "@/components/Header.vue";
 import PersonalInformation from "@/components/PersonalInformation.vue";
 import Skills from "@/components/Skills.vue";
 
 export default {
-  components: { PersonalInformation, Skills },
+  components: { Header, PersonalInformation, Skills },
 
   computed: {
     workSkills() {

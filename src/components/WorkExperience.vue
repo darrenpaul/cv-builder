@@ -1,15 +1,31 @@
 <template>
-  <div class="grid grid-cols-3">
-    <div>
-      <p>{{ date }}</p>
+  <div class="flex flex-col">
+    <div class="flex gap-2">
+      <p class="text-sm font-bold">{{ company }},</p>
+      <p class="text-sm">{{ position }},</p>
+      <p class="text-sm">{{ date }}</p>
     </div>
-    <div>
-      <p>{{ heading }}</p>
-      <ul v-for="(duty, index) in experience.duties" :key="index">
+
+    <div class="block">
+      <!-- <p class="pb-2 text-sm">{{ experience.location }}</p> -->
+
+      <ul
+        class="pl-8 list-disc"
+        v-for="(duty, index) in experience.duties"
+        :key="index"
+      >
         <li>{{ duty }}</li>
       </ul>
-      <p>Key Achievement</p>
-      <p>{{ experience.keyAchievement }}</p>
+
+      <div v-if="experience.keyAchievement">
+        <p class="pt-2 text-sm font-bold">Key Achievement</p>
+        <p class="text-sm">{{ experience.keyAchievement }}</p>
+      </div>
+
+      <div class="flex pt-2" v-if="stack">
+        <p class="text-sm font-bold">Stack:&nbsp;</p>
+        <p class="text-sm">{{ stack }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -24,8 +40,17 @@ export default {
     date() {
       return `${this.experience.startDate} - ${this.experience.endDate}`;
     },
-    heading() {
-      return `${this.experience.company}, ${this.experience.position}`;
+    company() {
+      return `${this.experience.company}`;
+    },
+    position() {
+      return `${this.experience.position}`;
+    },
+    stack() {
+      if (this.experience.stack) {
+        return this.experience.stack.join(", ");
+      }
+      return "";
     },
   },
 };

@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col">
-    <div class="bg-gray-400">
+  <div class="flex flex-col py-4">
+    <div>
       <Title
         :text="title.text"
         :textColor="twTextColor(title.textColor)"
@@ -8,8 +8,11 @@
       />
     </div>
     <template v-for="(item, index) in information" :key="index">
-      <!-- <InformationText :label="item.label" :text="item.value" /> -->
-      <InformationText :label="item.label" :text="item.value" />
+      <InformationText
+        :label="item.label"
+        :icon="item.icon"
+        :text="item.value"
+      />
     </template>
   </div>
 </template>
@@ -32,8 +35,8 @@ export default {
   data() {
     return {
       title: {
-        text: "Personal Information",
-        textColor: "red-500",
+        text: "CONTACT",
+        textColor: "gray-900",
         textSize: "medium",
       },
     };
@@ -43,32 +46,34 @@ export default {
     information() {
       return [
         {
-          label: { text: "Telephone" },
-          value: { text: this.$store.getters["personalInformation/TELEPHONE"] },
-        },
-        {
           label: { text: "Cellphone" },
+          icon: ["fas", "phone-alt"],
           value: { text: this.$store.getters["personalInformation/CELLPHONE"] },
         },
         {
           label: { text: "Email" },
+          icon: ["fas", "envelope"],
           value: { text: this.$store.getters["personalInformation/EMAIL"] },
         },
         {
+          label: { text: "Website" },
+          icon: ["fas", "globe-africa"],
+          value: { text: this.$store.getters["personalInformation/WEBSITE"] },
+        },
+        {
           label: { text: "Linkedin" },
+          icon: ["fab", "linkedin"],
           value: { text: this.$store.getters["personalInformation/LINKEDIN"] },
         },
         {
           label: { text: "Github" },
+          icon: ["fab", "github"],
           value: { text: this.$store.getters["personalInformation/GITHUB"] },
         },
         {
           label: { text: "Instagram" },
+          icon: ["fab", "instagram"],
           value: { text: this.$store.getters["personalInformation/INSTAGRAM"] },
-        },
-        {
-          label: { text: "Website" },
-          value: { text: this.$store.getters["personalInformation/WEBSITE"] },
         },
       ];
     },
